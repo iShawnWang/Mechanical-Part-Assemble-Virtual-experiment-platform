@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<title>机械零件装配虚拟实验平台</title>
+		<!-- no cache headers -->
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!--progress bar-->
+		<link rel="stylesheet" href="pace/themes/pace-theme-loading-bar.css" />
+		<script type="text/javascript" src="js/pace.min.js"></script>
+	</head>
+
+	<body>
+		<div id="notifycation" style="width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Open Sans;
+	margin-top: 30%;">由于需要加载大量机械零件实体文件，速度较慢，请谅解!</div>
+		<!--anim-->
+		<script type="text/javascript" src="js/Tween.js"></script>
+		<!--three.js-->
+		<script type="text/javascript" src="js/three.min.js"></script>
+		<script type="text/javascript" src="js/CanvasRenderer.js" ></script>
+		<script type="text/javascript" src="js/Projector.js" ></script>
+		<script type="text/javascript" src="js/MTLLoader.js"></script>
+		<script type="text/javascript" src="js/OBJMTLLoader.js"></script>
+		<script type="text/javascript" src="js/TrackballControls.js"></script>
+		<!--color picker-->
+		<script type="text/javascript" src="js/jscolor/jscolor.js"></script>
+		<!--main-->
+		<script type="text/javascript" src="js/main_viewports.js"></script>
+		<script type="application/javascript">
+			function jump(currentObj) {
+				location.href = 'experiment.html?currentObj=' + currentObj;
+			}
+		</script>
+		<link rel="stylesheet" href="css/basic.css" />
+
+		<canvas id="pip"></canvas>
+		<!--bottom nav bar-->
+		<nav>
+			<!--objChooser-->
+			<div id="objChooser">
+				<ul id="chooser">
+					<li onclick="jump(0)">
+						带轮实验
+					</li>
+					<li onclick="jump(1)">
+						齿轮与齿条实验
+					</li>
+					<li onclick="jump(2)">
+						一级减速器实验
+					</li>
+					<li onclick="jump(3)">
+						行星减速器实验
+					</li>
+				</ul>
+				<div>实验</div>
+			</div>
+			<!--<button onclick="toogleWireFrame()">线框图模式</button>-->
+			<button onclick="tooglePip()">缩略图</button>
+			<button onclick="toogleWireFrameAll()">线框图模式</button>
+			<button onclick="split()">爆炸图</button>
+			<button onclick="resetState()">重置视图</button>
+			<!--objColor-->
+			单个零件颜色:
+			<input id="baba1" readonly="true" class="color {slider:false,pickerClosable:true}" id='objColor' value="66ff00" onchange="changeObjColor('0x'+this.value)"> 布景颜色:
+			<input id="baba2" readonly="true" class="color {slider:false,pickerClosable:true}" id='groundColor' value="008200" onchange="changeGroundColor('0x'+this.value)">
+		</nav>
+	</body>
+
+</html>

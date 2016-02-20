@@ -1,0 +1,82 @@
+body {
+	margin: 0px;
+	overflow: hidden;
+	color: #FFFFFF;
+	font-size: large;
+	background-color: black;
+	background-size: cover;
+}
+ul {
+	list-style-type: none;
+}
+#container {
+	display: none;
+}
+#pip {
+	display: none;
+	position: absolute;
+	background: white;
+	left: 0;
+	bottom: 47px;
+}
+#objChooser {
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+}
+#objChooser:hover ul {
+	width: 100px;
+	display: inline-block;
+}
+#chooser {
+	padding-bottom: 10px;
+	padding-top: 12px;
+	display: none;
+}
+li:hover {
+	color: black;
+	background: white;
+}
+nav {
+	display: none;
+	position: absolute;
+	opacity: 0.5;
+	background-color: black;
+	bottom: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	text-align: center;
+	font-style: oblique;
+}
+button {
+	font-size: large;
+	background: transparent;
+	color: #FFFFFF;
+}
+input {
+	font-size: large;
+	color: #FFFFFF;
+}
+nav ul {
+	display: inline-block;
+	list-style: none;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 5%;
+	text-align: center;
+}
+.nav_menu {
+	display: inline-block;
+}
+.nav_menu:hover .nav_menu_item {
+	display: block;
+}
+.nav_menu_item {
+	display: none;
+}
+.nav_menu_item:hover {
+	background: #FFFFFF;
+	color: #000000;
+}

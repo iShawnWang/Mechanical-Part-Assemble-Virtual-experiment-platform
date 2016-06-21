@@ -6,14 +6,14 @@
 初学者作品..代码很烂..为了参加  [中国大学生计算机设计大赛](http://www.jsjds.org) 而制作
 
 
-![](/Users/pi/Mechanical-Part-Assemble-Virtual-experiment-platform/Img/作品截图1.png)
+![](./Img/作品截图1.png)
 
-![](/Users/pi/Mechanical-Part-Assemble-Virtual-experiment-platform/Img/作品截图2.png)
+![](./Img/作品截图2.png)
 
-![](/Users/pi/Mechanical-Part-Assemble-Virtual-experiment-platform/Img/作品截图3.png)
+![](./Img/作品截图3.png)
 
 预览Gif 正在加载中......
 
-![demo](./demo.gif)
+![demo](./Img/demo.gif)
 
 # [在线演示](http://big-pi.github.io/Mechanical-Part-Assemble-Virtual-experiment-platform/)

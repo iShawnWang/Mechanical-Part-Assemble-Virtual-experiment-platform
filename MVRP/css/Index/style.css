@@ -1,0 +1,248 @@
+body {
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: Helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+h1 {
+  font-size: 36px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+.clear {
+  clear: both;
+  height: 0;
+}
+@media screen and (min-width: 768px) {
+  .hv_center {
+    width: 100%;
+    margin: auto;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+#header {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#header .container {
+  width: 100%;
+}
+#header .buttons a {
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #555;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 0.8em 1.6em;
+  margin-right: 50px;
+  display: inline-block;
+  margin-bottom: 20px !important;
+  line-height: 1.2;
+}
+#header .buttons a img {
+  border: none;
+}
+#header .buttons a:hover {
+  color: indianred;
+  border-color: indianred;
+}
+#header .buttons a:last-child {
+  margin-right: 20px;
+}
+#header .content {
+  position: relative;
+  left: 100px;
+}
+#header .content h1 {
+  margin-top: 150px;
+  text-align: center;
+  color: #666;
+  letter-spacing: 2px;
+}
+#header .content h1 small {
+  font-size: 12px;
+  margin-left: 10px;
+}
+#header .content h2 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #666;
+  line-height: 1.7;
+  max-width: 96%;
+  margin: 30px auto 0 auto;
+}
+#header .content .slogan_description {
+  margin-top: 20px;
+  color: #999;
+  font-size: 12px;
+}
+#header .content .buttons {
+  margin-top: 120px;
+  text-align: center;
+}
+#header .image {
+  position: relative;
+  right: -100px;
+  top: 50px;
+}
+#header .image img {
+  height: 520px;
+  width: auto;
+}
+@media screen and (max-width: 568px) {
+  #header .content {
+    left: 0;
+  }
+  #header .content h1 {
+    margin-top: 100px;
+    font-size: 32px;
+    letter-spacing: 0;
+  }
+  #header .content .buttons {
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  #header .content .buttons a {
+    font-size: 12px;
+    padding: 0.7em 0.9em;
+    margin-right: 10px;
+  }
+  #header .image {
+    right: -10px;
+    top: 30px;
+  }
+  #header .image img {
+    height: 300px;
+  }
+}
+#top {
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.8;
+  padding: 1.8em 0;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
+  letter-spacing: 1px;
+}
+#top a {
+  text-decoration: none;
+  color: #666;
+  border-bottom: 1px dashed #666;
+}
+#top a:hover {
+  color: #cd2d36;
+  border-bottom: 1px dashed #cd2d36;
+}
+#texts {
+  border-top: 1px solid #f0f0f0;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 85px 0;
+  font-size: 14px;
+  color: #666;
+}
+#texts .block {
+  width: 85%;
+  max-width: 720px;
+  margin: 0 auto 50px auto;
+}
+#description {
+  margin-top: 80px;
+  border-top: 1px solid #f0f0f0;
+}
+#description .case {
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+#description .case .case_container {
+  width: 85%;
+  margin: 0 auto 0 auto;
+  padding: 85px 0;
+}
+#description .case .case_container h2 {
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: #111;
+}
+#description .case .case_container p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+#description .case .case_container img {
+  margin-left: 5%;
+  width: 95%;
+  max-width: 100%;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+#description .case .left img {
+  margin-left: 0;
+}
+#description .case .right {
+  width: 85%;
+  margin-left: 15%;
+}
+@media screen and (min-width: 1280px) {
+  #description .case .case_container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 568px) {
+  #description .case .case_container {
+    width: 90%;
+    padding: 50px 0;
+  }
+  #description .case .case_container img {
+    width: 100%;
+    margin-left: 0;
+  }
+  #description .case .right {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+}
+#footer {
+  padding: 50px 0 20px 0;
+  text-align: center;
+  line-height: 1.8;
+  color: #666;
+  font-size: 12px;
+}
+#footer a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 10px;
+}
+#footer a:hover {
+  color: indianred;
+}

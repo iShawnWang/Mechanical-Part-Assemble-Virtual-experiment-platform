@@ -1,8 +1,6 @@
 //Constant
 var OBJ_COUNT = [12, 8, 19, 28];
 var ABSORB_DISTANCE = 55;
-//all the obj's initial position
-var RESET_OFFSET = 0;
 //
 var ROTATION_90 = 90 / 180 * Math.PI;
 //
@@ -11,43 +9,43 @@ var ANIM_TIME_LONG = 800;
 var ANIM_OFFSET_SCALE = 1.2; //mutiply
 //
 var PIP_WIDTH = 300;
-var PIP_HEIGHT = PIP_WIDTH * (window.innerHeight / window.innerWidth) * 1.2;
-var PIP_BG = 0x00ff00;
+var PIP_HEIGHT = 169;
+var PIP_BG = 0xcaec67;
 //
-
+var lastSELECTED;
 var OPACITY = 0.5;
 var NON_OPACITY = 1;
-var GROUND_BG = 0xFFFFFF;
+var GROUND_BG =0x3fff15;
 //create an endless plane
 var ENDLESS = 20000;
-var COLOR_MAP0 = ['0x00AAAA', '0xFF981D', '0xFFFFFF', '0x691BB8', '',
+var COLOR_MAP0 = ['0x9a52b6', '0x4797db', '0xefe0b5', '0xf076c4', '',
 	//
-	'', '0xff0000', '0xff0000', '0x00ff00', '0x00ff00',
+	'', '0xe96d7c', '0xe96d7c', '0x00ff00', '0x00ff00',
 	//
 	'', '0xff00ff'
 ];
-var COLOR_MAP1 = ['0x00AAAA', '0xFF981D', '0xFFFFFF', '0x691BB8', '',
+var COLOR_MAP1 = ['0x9a52b6', '0xFF981D', '0x4797db', '0x691BB8', '',
 	//
 	'0xC1004F', '0xff0000', ''
 ];
-var COLOR_MAP2 = ['0x00AAAA', '0xFF981D', '0xFF981D', '0x4FB300', '',
+var COLOR_MAP2 = ['0x4797db', '0xf076c4', '0xf076c4', '0x4FB300', '',
 	//
-	'0xC1004F', '0xff0000', '0xC1004F', '0x00AAAA', '0x691BB8',
+	'0xC1004F', '0xff0000', '0xC1004F', '0x4797db', '0x691BB8',
 	//
 	'0x9D100', '0xff00ff', '0xAA40FF', '0xff0000', '0xFFFFFF',
 	//
 	'', '', '', ''
 ];
 var COLOR_MAP3 = [
-	'0x00AAAA', '0x00AAAA', '0x9D100', '0x4FB300', '',
+	'0xf076c4', '0xf076c4', '0x9D100', '0x4FB300', '',
 	//
 	'0xFFFFFF', '', '0xC1004F', '', '0xff0000',
 	//
-	'0xFF981D', '0xFF981D', '0xC1004F', '', '',
+	'0x4797db', '0x4797db', '0xC1004F', '', '',
 	//
 	'', '0xff00ff', '0xAA40FF', '0xff0000', '0x9D100',
 	//
-	'0x691BB8', '0xff00ff', '0xAA40FF', '0xff0000', '0xFFFFFF',
+	'0x691BB8', '0xff00ff', '0xAA40FF', '0xff0000', '0xefe0b5',
 	'0x9D100', '0x691BB8'
 ];
 //
@@ -154,7 +152,6 @@ var mouse = new THREE.Vector2(),
 	INTERSECTED, SELECTED;
 //delta on the plane
 var delta;
-var lastSELECTED;
 //
 var tween;
 var tweenSet = [];
@@ -212,6 +209,7 @@ function parseParam() {
 	if (currentObj == null || currentObj == "") {
 		currentObj = "2";
 	}
+
 	init();
 }
 
@@ -219,14 +217,16 @@ function init() {
 	//progress bar onload
 	Pace.on("done", function() {
 		console.log("Alldone");
+		var label=document.getElementById("numberOfObjects");
+		label.innerHTML=" 模型个数 : "+OBJ_COUNT[currentObj];
 		//show main interface
 		container.style.display = "block";
 		document.getElementsByTagName("nav")[0].style.display = "block";
 		document.getElementById("pip").style.display = "block";
-		document.getElementById("notifycation").style.display = "none";
+		document.getElementById("notification").style.display = "none";
 		animate();
 	});
-	//
+
 	container = document.createElement('div');
 	document.body.appendChild(container);
 	//camera
@@ -448,7 +448,6 @@ function onDocumentMouseMove(event) {
 						lastSELECTED.position.z = position.z;
 					}
 				}).onComplete(function() {
-					console.log("complete");
 					tween = null;
 				})
 				.start();
@@ -567,16 +566,6 @@ function tooglePip() {
 	}
 
 
-}
-
-function changeObjColor(color) {
-	if (lastSELECTED) {
-		lastSELECTED.material.color.setHex(color);
-	}
-}
-
-function changeGroundColor(color) {
-	groundMaterial.color.setHex(color);
 }
 
 function resetState() {

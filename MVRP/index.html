@@ -1,139 +1,71 @@
 <!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<html lang="zh">
+    <title>机械设计制造虚拟仿真实验平台</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <link href="css/Index/pure-min.css" type="text/css" rel="stylesheet">
+    <link href="css/Index/grids-responsive-min.css" type="text/css" rel="stylesheet">
+    <link href="css/Index/style.css" type="text/css" rel="stylesheet">
+    <script type="application/javascript">
+        function jump(currentObj) {
+            location.href = 'experiment.html?currentObj=' + currentObj;
+        }
+    </script>
+  <body>
 
-	<head>
-		<meta charset="utf-8">
-		<title>机械零件装配虚拟实验平台</title>
-		<link rel="stylesheet" media="screen" href="css/bootstrap.css" />
-		<link rel="stylesheet" media="screen" href="css/styles.css" />
 
-		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/scripts.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script type="application/javascript">
-			function jump(currentObj) {
-				location.href = 'experiment.html?currentObj=' + currentObj;
-			}
-		</script>
+    <div id="header" class="pure-g">
+      <div class="container">
+        <div class="vcenter pure-u-1 pure-u-sm-1-2">
+          <div class="content">
+            <h1>机械设计制造虚拟仿真实验平台</h1>
+            <h2>在电脑上,模拟真实实验</h2>
+            <div class="buttons"><a onclick="jump(2)">开始实验</a>
+            </div>
+          </div>
+        </div>
+        <div class="vcenter pure-u-1 pure-u-sm-1-2"><a href="http://mvrp.farbox.com/" class="image">
+            <img id="wow_image" src="img/展示图.png"></a>
+        </div>
+      </div>
+    </div>
+    <div id="description">
+      <div class="case pure-g">
+        <div class="case_container">
+          <div class="vcenter pure-u-1 pure-u-sm-1-2">
+            <h2>虚拟实验平台</h2>
+            <div class="content"><div class="p_part"><p>计算机上模拟传统实验室中的各种实验项目，它提供了全新的教学环境，让我们能随时随地操作仪器进行各种实验。</p>
 
-	</head>
+<p>1.没有任何限制。。随意使用任何仪器设备</p>
 
-	<body data-spy="scroll" data-offset="61" data-target=".nav-collapse" style="background-color: black">
-		<!--Home-->
-		<section id="home" class="section home">
-			<div class="container">
-				<div class="row">
-					<div class="spn12">
-						<div class="title-unit">
-							<!--<img src="img/nim_benner.png" alt="Brand">-->
-							<h1 alt="Brand"> MVRP</h1>
-							<h2>机械零件装配虚拟实验平台</h2>
-						</div>
-						<div id="thecircles" class="hidden-phone hidden-tablet" align="center">
-							<div class="circle">
-								<a class="smoothscroll" href="#intruduction">
-									<i class="icon-briefcase"></i>
-									<h2>简介</h2>
-								</a>
-							</div>
-							<div class="circle">
-								<a class="smoothscroll" onclick="jump(2)">
-									<i class="icon-cog"></i>
-									<h2>开始实验</h2>
-								</a>
-							</div>
-							<div class="circle">
-								<a class="smoothscroll" href="#about">
-									<i class="icon-eye-open"></i>
-									<h2>关于</h2>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--Home End-->
-		<section id="intruduction" class="section service">
-			<div class="container">
-				<!-- section heading -->
-				<div class="row">
-					<div class="span12 header">
-						<h2>虚拟实验平台</h2>
-						<span>计算机上模拟传统实验室中的各种实验项目，它提供了全新的教学环境，让我们能随时随地操作仪器进行各种实验。</span>
-						<hr>
-					</div>
-				</div>
-				<!-- section heading end -->
-				<!-- Service Box -->
-				<div class="row">
-					<div class="box">
-						<div class="design">
-							<h2>开放<br />创新</h2>
-							<div class="text">
-								<p>没有任何限制。。随意使用任何仪器设备 </p>
-							</div>
-							<hr>
-						</div>
-						<div class="development">
-							<h2>指导<br />互助</h2>
-							<div class="text">
-								<p>学生在遇到问题时能向老师或其他同学请求指导，老师也可以通过平台给所有在线的学生讲解实验的流程. </p>
-							</div>
-							<hr>
-						</div>
-						<div class="support">
-							<h2>低成本 <br />高成效</h2>
-							<div class="text">
-								<p>降低实验经费，但取得的实验效果等价于甚至优于真实环境中所取得的效果。</p>
-							</div>
-							<hr>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--Introduction end-->
-		<!--About -->
-		<section id="about" class="section about">
-			<div class="container">
-				<!-- section heading -->
-				<div class="row">
-					<div class="span12 header">
-						<h2>关于</h2>
-						<span>虚拟实验平台－一场实验教学的革命 </span>
-						<hr>
-					</div>
-				</div>
-				<!-- section heading end -->
-				<!-- Team -->
-				<div class="row">
-					<div class="team">
-						<div class="person">
-							<img src="img/team/threejs.jpg" alt="">
-							<h2 class="title">基于 <span><a href="http://threejs.org/">Three.js</a></span>
-							</h2>
-							<h4>运行在浏览器端基于&nbsp;js&nbsp;和&nbsp;webgl&nbsp;的3D引擎<h4>
-							<hr>
-						</div>
-						<div class="person">
-							<img src="img/team/proe.png" alt="">
-							<br/>
-							<br/>
-							<h2 class="title"><span><a href="http://baike.baidu.com/link?url=sUlKi3tDnRyP04eUg2JpWarI-bPo2YCiJ_GI9r49tYFAGDQIkF2t33OIjOih50EvSpIfG94kvKrP64EF9X7bJK">Pro/Engineer</a></span>
-							</h2>
-							<h4>现今主流的模具和产品设计三维CAD/CAM软件之一。
-								 帮助我们建立实体的零件模型
-							</h4>
-							<hr>
-						</div>
-					</div>
-					<!-- Team end -->
-				</div>
-		</section>
-		<!--About end -->
-	</body>
+<p>2.学生在遇到问题时能向老师或其他同学请求指导，老师也可以通过平台给所有在线的学生讲解实验的流程.</p>
 
-</html>
+<p>3.降低实验经费，但取得的实验效果等价于甚至优于真实环境中所取得的效果。</p></div></div>
+          </div>
+          <div class="vcenter pure-u-1 pure-u-sm-1-2"><img src="img/展示图2.png">
+          </div>
+        </div>
+      </div>
+      <div class="case pure-g">
+        <div class="case_container">
+          <div class="vcenter pure-u-1 pure-u-sm-1-2">
+            <div class="left"><img src="img/ProeThreeJS.png">
+            </div>
+          </div>
+          <div class="vcenter pure-u-1 pure-u-sm-1-2">
+            <div class="right">
+              <h2>虚拟实验平台－一场实验教学的革命</h2>
+              <div class="content"><div class="p_part"><p>1.基于 Three.js : 运行在浏览器端基于 js 和 webgl 的3D引擎</p>
+
+<p>2.Pro/Engineer : 现今主流的模具和产品设计三维CAD/CAM软件之一。 帮助我们建立实体的零件模型</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</body></html>
